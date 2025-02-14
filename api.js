@@ -30,7 +30,7 @@ export const postUserSignup = async(userInfo)=>{
 export const addUserLogin = async(userLoginInfo,dispatch)=>{
     console.log("[[[[[[[[[[[",userLoginInfo)
     try{
-        const loginResponse = await publicRequest.post('/user/login',userLoginInfo)
+        const loginResponse = await publicRequest.post('/user/login', userLoginInfo  )
         console.log("resssssssssssssssssssss",loginResponse.data)
         dispatch(storeToken(loginResponse.data))
         return loginResponse.data
@@ -114,7 +114,7 @@ export const getAllMovieData = async()=>{
         
 
     }catch(err){
-        console.log(err.message)
+        console.log(err)
     }
 }
 

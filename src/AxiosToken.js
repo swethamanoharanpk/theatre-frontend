@@ -22,7 +22,8 @@
 import axios from 'axios';
 import localStorage from 'redux-persist/es/storage';
 
-const basicURL = 'http://localhost:4000';
+// const basicURL = 'http://localhost:4000';
+const basicURL = 'https://theatre-backend-nqxd.onrender.com'
 
 // Placeholder axios instances
 export const secureRequest = axios.create({

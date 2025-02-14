@@ -7,19 +7,20 @@ import { useDispatch } from 'react-redux'
 function AdminLogin() {
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
+    const navigate = useNavigate()
 
     const [adminData,setAdminData] = useState([])
-
-    const Navigate = useNavigate()
     const dispatch = useDispatch()
 
     const loginSubmit = ()=>{
         console.log(email,password)
         addAdminLogin({email,password},dispatch).then((result)=>{
+          console.log(result);
+          
           setAdminData(result)
 
         })
-        Navigate('/adminhome')
+        // navigate('/adminhome')
 
 
     }
