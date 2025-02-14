@@ -6,12 +6,16 @@ import { adminSecureRequest, publicRequest, secureRequest } from './src/AxiosTok
 
 export const addAdminLogin = async(adminInfo,dispatch)=>{
     try{
-        const getAdmin = await publicRequest.post('/admin/adminlogin',adminInfo)
+        console.log(adminInfo,"sdfdssdf");
+        
+        const getAdmin = await publicRequest.post('/admin/adminlogin',{adminInfo})
+        console.log(getAdmin,"sdfdsfdssfsd");
+        
         dispatch(storeAdminToken(getAdmin.data))
         return getAdmin.data
 
     }catch(err){
-        console.log(err.message)
+        console.log(err)
     }
 }
 
