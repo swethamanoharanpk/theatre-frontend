@@ -20,7 +20,7 @@ import {
   MDBModalFooter,
 } from "mdb-react-ui-kit";
 
-export const AdminHome = () => {
+ const AdminHome = () => {
   const [movie, setMovie] = useState([]);
 
   const [basicModal, setBasicModal] = useState(false);
@@ -29,6 +29,8 @@ export const AdminHome = () => {
 
   console.log("zzzzzzzzzzzzzzzzzzzzz", selectedMovie);
 
+  console.log(movie);
+  
   const [movieName, setMovieName] = useState();
   const [language, setLanguage] = useState();
   const [genre, setGenre] = useState();
@@ -279,3 +281,5 @@ export const AdminHome = () => {
     </div>
   );
 };
+
+export default AdminHome
