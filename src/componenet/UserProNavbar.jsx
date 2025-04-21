@@ -17,6 +17,7 @@ const UserProNavbar = () => {
 
     function userLogout() {
         dispatch(deleteToken())
+        localStorage.removeItem('persist:Theatre-Project')
         navigate('/')
 
 
